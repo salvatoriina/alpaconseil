@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "C:\\Users\\yacin\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.autoComplete.extraPaths": [
+        "./C:/Users/yacin/Desktop/mysite"
+    ],
+    "python.analysis.extraPaths": [
+        "./C:/Users/yacin/Desktop/mysite"
+    ],
+}

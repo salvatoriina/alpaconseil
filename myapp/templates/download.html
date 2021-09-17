@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Django App1</title>
+</head>
+<body>
+<form action = "{% url 'simple_download' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<button type="submit">Download</button>
+
+
+</form>
+</body>
+</html>

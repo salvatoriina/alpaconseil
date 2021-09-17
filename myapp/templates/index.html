@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Export</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+
+<body>
+   
+            <form action = "{% url 'simple_upload' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <input type="file" id="myfile" name="myfile">
+                <p>Drag your files here or click in this area.</p>
+                <button type="submit">Upload</button>
+                
+                
+            </form>
+            
+          
+            
+                
+                
+            
+</body>
+
+
+</html>
