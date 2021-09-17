@@ -50,13 +50,6 @@ def simple_upload(request):
         dfs[1].to_excel(writer,sheet_name="Secondaire")
         writer.save()
 
-        """for i in range(1,len(dfs)):
-            for j in colonnes_sheet:
-                if dfs[i].columns[1]==j:
-                    dfs[i].to_excel(writer,sheet_name=j)
-                    writer.save()
-                else:
-                 continue"""
         file_url="media/"+name_f
         return render(request, 'home.html', {
             'filename':name_f,'fileurl':file_url}
