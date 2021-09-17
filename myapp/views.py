@@ -62,7 +62,7 @@ def simple_upload(request):
             'filename':name_f,'fileurl':file_url}
         )
 def simple_download(request):
-        list_of_files = glob.glob('media/*')
+        list_of_files = glob.glob('')
         latest_file = max(list_of_files, key=os.path.getctime)
         l=latest_file.split("/")
         #Getting the last file uploaded...
