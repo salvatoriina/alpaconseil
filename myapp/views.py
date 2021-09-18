@@ -49,25 +49,21 @@ def simple_upload(request):
         dfs[0].to_excel(writer,sheet_name="Principal")
         dfs[1].to_excel(writer,sheet_name="Secondaire")
         writer.save()
+        
 
         file_url="media/"+name_f
-        return render(request, 'home.html', {
-            'filename':name_f,'fileurl':file_url}
-        )
-def simple_download(request):
-        list_of_files = glob.glob('media/*')
-        latest_file = max(list_of_files, key=os.path.getctime)
-        l=latest_file.split("/")
-        #Getting the last file uploaded...
-        file_name=l[-1]
-        file_name=file_name
-        newfile = NamedTemporaryFile(suffix='.txt')
+        
         if file_name!='':
-            file_path=file_name
+            file_path=file_url
+            print("nabil0")
             path = open(file_path, 'rb')
+            print("nabil1")
             response = HttpResponse(path.read(), content_type='application/ms-excel; charset=utf-8')
-            response['Content-Disposition'] = "attachment; filename=%s" % file_name
+            print("nabil")
+            response['Content-Disposition'] = "attachment; filename=%s" % name_f
             return response
         else:
              return render(request,'index.html')
+
+            
 

@@ -7,5 +7,5 @@ urlpatterns =[
     path('',views.index,name='index'),
     path('home/',views.simple_upload,name='simple_upload'),
     #path('download/',views.simple_download,name='simple_download'),
-    path('download/',views.simple_download,name='simple_download'),
+    #path('download/',views.simple_download,name='simple_download'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
